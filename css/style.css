@@ -383,6 +383,13 @@ a:focus {
   width: 56.5%;
 }
 
+.test_section .test_container .box img {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+
 .client_section {
   padding-bottom: 150px;
 }
