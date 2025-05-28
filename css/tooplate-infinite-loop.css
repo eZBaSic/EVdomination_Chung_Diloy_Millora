@@ -51,11 +51,15 @@ blockquote {
 
 .tm-content-box {
   padding-top: 20px;
-  padding-bottom: 0;
+  padding-bottom: 40px;
 }
 
 .tm-text-primary {
   color: #37A;
+}
+
+.tm-text1-primary {
+  color: #fff;
 }
 
 .tm-font-big {
@@ -146,7 +150,7 @@ blockquote {
 
 #home {
 	background-color: #222;
-  background-image: url(../img/project-bg-1.png);
+  background-image: url(../img/project-bg-3.jpg);
   background-repeat: no-repeat;
   height: 100vh;
   min-height: 375px;
@@ -250,6 +254,11 @@ blockquote {
 .tm-section-title {
   font-size: 2.6rem;
   font-weight: normal;
+}
+
+.tm-section2-title {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .tm-intro-text {
@@ -410,8 +419,33 @@ blockquote {
   padding-bottom: 120px;
 }
 
+.tm-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* space between items */
+  justify-content: center;
+}
+
 .tm-gallery-item {
-  margin: 0 15px;
+  width: 500px;  /* or whatever size fits your design */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tm-gallery-item img {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.tm-gallery-item figcaption h2 {
+  color: #333; /* default color */
+  transition: color 0.3s ease;
+}
+
+.tm-gallery-item:hover figcaption h2 {
+  color: #37A; /* or any color you want on hover */
 }
 
 .slick-dots {
@@ -591,7 +625,7 @@ figure.effect-honey:hover h2 i {
 #contact {
   color: white;
   background-color: #001828;
-  background-image: url(../img/infinite-loop-03.jpg);
+  background-image: url(../img/project-bg-1.png);
   background-position: center;
   background-repeat: no-repeat;
   min-height: 980px;
@@ -820,3 +854,44 @@ p {
   color: #ddd;
 }
 
+.tm-keypoints-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.tm-panel {
+  background-image: url(../img/project-bg-2.jpg);
+  background-size: cover;        /* ensures the image covers the entire panel */
+  background-position: center;   /* centers the image */
+  background-repeat: no-repeat;
+  color: white;                  /* change text color for contrast */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  flex: 1 1 calc(50% - 15px); /* 2 panels side by side with gap */
+}
+
+.tm-panel1 {
+  background-image: url(../img/project-bg-3.jpg);
+  background-size: cover;        /* ensures the image covers the entire panel */
+  background-position: center;   /* centers the image */
+  background-repeat: no-repeat;
+  color: white;                  /* change text color for contrast */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  flex: 1 1 calc(50% - 15px); /* 2 panels side by side with gap */
+}
+
+/* Stack panels on smaller screens */
+@media (max-width: 768px) {
+  .tm-panel {
+    flex: 1 1 100%;
+  }
+  .tm-panel1 {
+    flex: 1 1 100%;
+  }
+}
